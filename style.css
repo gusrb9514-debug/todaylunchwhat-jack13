@@ -88,21 +88,12 @@ h1 {
     font-weight: 700;
     color: var(--text-color);
     background-color: var(--ball-bg-color);
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 15px;
     border: 2px solid var(--ball-border-color);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-}
-
-.menu-image {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #generate-btn {
