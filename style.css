@@ -58,9 +58,8 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 
-        0 10px 20px rgba(0,0,0,0.19), 
-        0 6px 6px rgba(0,0,0,0.23), 
-        inset 0 0 1px rgba(255,255,255,0.1);
+        0 10px 20px rgba(0,0,0,0.1), 
+        0 6px 6px rgba(0,0,0,0.08);
     text-align: center;
     width: 90%;
     max-width: 500px;
