@@ -1,17 +1,60 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --container-bg-color: #2c2c2c;
+    --ball-bg-color: #3a3a3a;
+    --ball-border-color: #4a4a4a;
+    --h1-color: #f0f0f0;
+}
+
+body.light-mode {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --container-bg-color: #ffffff;
+    --ball-bg-color: #e0e5ec;
+    --ball-border-color: #c8d0d9;
+    --h1-color: #333;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.75" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.05"/%3E%3C/svg%3E');
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-toggle-btn {
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #2575fc;
 }
 
 .main-container {
-    background-color: #2c2c2c;
+    background-color: var(--container-bg-color);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 
@@ -21,13 +64,15 @@ body {
     text-align: center;
     width: 90%;
     max-width: 500px;
+    transition: background-color 0.3s ease;
 }
 
 h1 {
-    color: #f0f0f0;
+    color: var(--h1-color);
     font-weight: 700;
     margin-bottom: 30px;
     font-size: 2.5rem;
+    transition: color 0.3s ease;
 }
 
 #numbers-container {
@@ -42,18 +87,18 @@ h1 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #3a3a3a;
+    background: var(--ball-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #fff;
-    border: 2px solid #4a4a4a;
+    color: var(--text-color);
+    border: 2px solid var(--ball-border-color);
     box-shadow: 
         0 4px 8px rgba(0,0,0,0.2), 
         inset 0 2px 2px rgba(255,255,255,0.1);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .number-ball:hover {
